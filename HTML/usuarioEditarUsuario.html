@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+
+    <!-- -------------------- Font awesome iconos -------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- -------------------- Conexion a archivo CSS -------------------- -->
+    <link rel="stylesheet" href="/CSS/estiloUsuario.css">
+
+    <!-- -------------------- Sweet alert -------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- -------------------- Encabezado -------------------- -->
+    <header><i class="fa fa-user"></i> Vista Usuario</header>
+
+    <!-- -------------------- Menú -------------------- -->
+    <nav>
+        <div class="sidebar">
+            <a href="/HTML/vistaUsuario.html"><button class="" id="btnInicio"><i class="fa fa-home"></i> Inicio</button></a>
+            <a href="/HTML/usuarioEditarUsuario.html"><button class="activo" id="btnEditar"><i class="fa fa-pencil"></i> Editar usuario</button></a>
+            <button class="" id="btnSalir"><i class="fa fa-arrow-right"></i> Salir</button>
+        </div>
+    </nav>
+
+    <!-- -------------------- Contenido -------------------- -->
+    <section>
+        <div class="contenido">
+        <!-- Contenido de editar usuario -->
+            <div id="editarUsuario">
+                <div class="contenedor">
+                    <h2>Editar usuario</h2>
+                    <form action="">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" value="Santiago Cuellar">
+
+                        <label for="rol">Rol:</label>
+                        <select id="rol" name="rol">
+                            <option value="0">Seleccione el rol</option>
+                            <option value="Desarrollador" selected>Desarrollador</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="SEO">SEO</option>
+                            <option value="RRHH">RRHH</option>
+                        </select>
+
+                        <button type="button" class="btnActualizar" id="btnActualizar">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------- Conexion a archivo JS -------------------- -->
+    <script src="/JS/contenidoUsuario.js"></script>
+</body>
+
+</html>

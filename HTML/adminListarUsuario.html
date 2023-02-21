@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+
+    <!-- -------------------- Font awesome iconos -------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- -------------------- Conexion a archivo CSS -------------------- -->
+    <link rel="stylesheet" href="/CSS/estiloAdmin.css">
+
+    <!-- -------------------- Sweet alert -------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- -------------------- Encabezado -------------------- -->
+    <header><i class="fa fa-user"></i> Vista Administrador</header>
+
+    <!-- -------------------- Menú -------------------- -->
+    <nav>
+        <div class="sidebar">
+            <a href="/HTML/vistaAdmin.html"><button class="" id="btnInicio"><i class="fa fa-home"></i> Inicio</button></a>
+            <a href="/HTML/adminCrearUsuario.html"><button class="" id="btnCrear"><i class="fa fa-user-plus"></i> Crear usuario</button></a>
+            <a href="/HTML/adminListarUsuario.html"><button class="activo" id="btnListar"><i class="fa fa-list"></i> Listar usuario</button></a>
+            <button class="" id="btnSalir"><i class="fa fa-arrow-right"></i> Salir</button>
+        </div>
+    </nav>
+
+    <!-- -------------------- Contenido -------------------- -->
+    <section>
+        <div class="contenido">
+            <!-- Contenido de listar usuario -->
+            <div id="listarUsuario">
+                <h2>Listar usuario</h2>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Rol</th>
+                                <th>Estado</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Santiago Cuellar</td>
+                                <td>Desarrollador</td>
+                                <td>1</td>
+                                <td>
+                                    <button onclick="document.getElementById('modalAct').style.display='block'"
+                                        class="editar" id="btnEditar"><i class="fa fa-pencil"></i></button>
+                                    <button class="eliminar" id="btnEliminar"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Santiago Cuellar</td>
+                                <td>Desarrollador</td>
+                                <td>1</td>
+                                <td>
+                                    <button class="editar" id="btnEditar"><i class="fa fa-pencil"></i></button>
+                                    <button class="eliminar" id="btnEliminar"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Santiago Cuellar</td>
+                                <td>Desarrollador</td>
+                                <td>1</td>
+                                <td>
+                                    <button class="editar" id="btnEditar"><i class="fa fa-pencil"></i></button>
+                                    <button class="eliminar" id="btnEliminar"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Santiago Cuellar</td>
+                                <td>Desarrollador</td>
+                                <td>1</td>
+                                <td>
+                                    <button class="editar" id="btnEditar"><i class="fa fa-pencil"></i></button>
+                                    <button class="eliminar" id="btnEliminar"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Modal para actualizar usuario -->
+                <div id="modalAct" class="modal">
+                    <span onclick="document.getElementById('modalAct').style.display='none'" class="close"
+                        title="Cerrar modal">×</span>
+                    <div class="contenedor">
+                        <h2>Editar usuario</h2>
+                        <form action="">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" value="Santiago Cuellar">
+
+                            <label for="rol">Rol:</label>
+                            <select id="rol" name="rol">
+                                <option value="0">Seleccione el rol</option>
+                                <option value="Desarrollador" selected>Desarrollador</option>
+                                <option value="Administrador">Administrador</option>
+                                <option value="SEO">SEO</option>
+                                <option value="RRHH">RRHH</option>
+                            </select>
+
+                            <button type="button" id="btnActualizar" class="btnEditar"
+                                onclick="actualizar(), document.getElementById('modalAct').style.display='none'">Actualizar</button>
+                            <button type="button" onclick="document.getElementById('modalAct').style.display='none'"
+                                class="btnCancelar">Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------- Conexion a archivo JS -------------------- -->
+    <script src="/JS/contenidoAdmin.js"></script>
+</body>
+
+</html>
